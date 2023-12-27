@@ -1,8 +1,9 @@
+import Button from "./Button";
 import "./ImcCalc.css";
 
 function ImcCalc() {
   return (
-    <div id="calcl-container">
+    <div id="calc-container">
         <h2>Calculadora de IMC</h2>
         <form id="imc-form">
             <div className="form-inputs">
@@ -16,8 +17,8 @@ function ImcCalc() {
                 </div>
             </div>
             <div className="action-control">
-                <button>Calcular</button>
-                <button>Limpar</button>
+                <Button id="calc-btn" text="Calcular"/>
+                <Button id="clear-btn" text="Limpar"/>
             </div>
         </form>
         
