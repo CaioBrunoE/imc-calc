@@ -1,11 +1,11 @@
 import Button from "./Button";
 import './ImcTable.css';
 
-function ImcTable({data}) {
+function ImcTable({data , imc , info , infoClass, resetCalc}) {
     return (
         <div id="result-container">
-          <p id="imc-number">Seu Imc:</p>
-          <p id="imc-info">Situação atual:</p>
+          <p id="imc-number">Seu Imc: <span className={infoClass}>{imc}</span></p>
+          <p id="imc-info">Situação atual: <span className={infoClass}>{info}</span></p>
           <h3>Confira as classificações:</h3>
           <div id="imc-table">
             <div className="table-header">
@@ -21,7 +21,7 @@ function ImcTable({data}) {
                 </div>
             ))}
           </div>
-          <Button id="back-bnt" text="voltar"/>
+          <Button id="back-bnt" text="voltar"action={resetCalc} />
         </div>
     )
 }
