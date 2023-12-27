@@ -1,4 +1,5 @@
-import Button from "./Button"
+import Button from "./Button";
+import './ImcTable.css';
 
 function ImcTable({data}) {
     return (
@@ -14,7 +15,7 @@ function ImcTable({data}) {
             </div>
             {data.map((item)=>(
                 <div className="table-data" key={item.info}>
-                    <p>{item.classication}</p>
+                    <p>{item.classification}</p>
                     <p>{item.info}</p>
                     <p>{item.obesity}</p>
                 </div>
